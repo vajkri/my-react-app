@@ -9,7 +9,7 @@
 
 p {
 	font-size: $font-size--sm;
-	font-weight: $font-weight--roman;
+	font-weight: $font-weight--regular;
 
 	@include mq('sm') {
 		font-size: $font-size--base;

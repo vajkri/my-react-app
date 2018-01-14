@@ -1,0 +1,25 @@
+/* ===========================================
+   utilities.container
+   ========================================= */
+
+/**
+ * Utilities – utility- and helper classes
+ * with the ability to override anything
+*/
+
+// Sets max-width of content
+
+.u-container {
+	width: calc(100% - #{$spacing--lg});
+	max-width: $content-width;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include mq('sm') {
+		width: calc(100% - #{$spacing--xl});
+	}
+}
+
+.u-container--narrow {
+	max-width: $content-width--narrow;
+}
