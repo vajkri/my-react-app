@@ -1,0 +1,29 @@
+/* ===========================================
+   objects.input-group
+   ========================================= */
+
+/**
+ * Objects – class-based selectors, that define
+ * undecorated, unopinionated design patterns
+*/
+
+.input-group {
+	display: block;
+	width: 100%;
+
+	&--inline {
+		@include mq('md') {
+			display: inline-flex;
+			width: calc(50% - #{$spacing--sm});
+			margin-right: $spacing--sm;
+		}
+	}
+}
+
+.input-group__submit {
+	width: 100%;
+
+	@include mq('md', max) {
+		margin-top: $spacing--base;
+	}
+}

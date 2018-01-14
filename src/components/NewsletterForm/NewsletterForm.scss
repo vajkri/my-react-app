@@ -1,0 +1,11 @@
+/*------------------------------------*\
+		NewsletterForm.scss
+\*------------------------------------*/
+
+@import "./styles/imports.scss";
+
+.newsletter-form {
+	@include mq('md') {
+		width: 50%;
+	}
+}

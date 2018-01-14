@@ -4,6 +4,7 @@ import MastHead from "./components/MastHead/MastHead";
 import SectionCta from "./components/SectionCta/SectionCta";
 import Slider from "./components/Slider/Slider";
 import SectionHeader from "./components/SectionHeader/SectionHeader";
+import ContactBlock from "./components/ContactBlock/ContactBlock";
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
 	      </div>
 	      <div className="u-block u-container u-container--narrow">
 		      <SectionHeader />
+		      <ContactBlock />
 	      </div>
       </main>
     );

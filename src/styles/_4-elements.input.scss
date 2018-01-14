@@ -1,0 +1,24 @@
+/* ===========================================
+   elements.input
+   ========================================= */
+
+/**
+ * Elements – unclassed HTML elements,
+ * redefine browsers' default styling
+*/
+
+input {
+	width: 100%;
+	padding: 15px $spacing--base;
+
+	background-color: $color-light;
+	border: 1px solid $color-grey-400;
+	border-radius: $border-radius;
+
+	font-size: $font-size--base;
+	color: $color-grey-200;
+
+	&::placeholder {
+		color: $color-grey-300;
+	}
+}

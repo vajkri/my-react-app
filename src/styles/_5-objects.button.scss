@@ -1,0 +1,26 @@
+/* ===========================================
+   objects.button
+   ========================================= */
+
+/**
+ * Objects – class-based selectors, that define
+ * undecorated, unopinionated design patterns
+*/
+
+.button {
+	padding: 16px $spacing--lg;
+	background-color: $color-primary;
+	border: none;
+	border-radius: $border-radius;
+
+	font-size: $font-size--base;
+	color: $color-light;
+	cursor: pointer;
+
+	transition: $trans-time $ease-tender background-color;
+
+	&:hover,
+	&:active {
+		background-color: darken($color-primary, 7%);
+	}
+}

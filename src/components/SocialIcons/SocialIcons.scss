@@ -1,0 +1,44 @@
+/*------------------------------------*\
+		SocialIcons.scss
+\*------------------------------------*/
+
+@import "./styles/imports.scss";
+
+.social-icons {
+	display: flex;
+	margin-top: 0;
+	margin-left: $spacing--base;
+	list-style: none;
+
+	@include mq('md', max) {
+		justify-content: center;
+		margin-top: $spacing--lg;
+		margin-left: 0;
+	}
+}
+
+.social-icons__item {
+	margin-left: $spacing--sm;
+
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.social-icons__link {
+	display: block;
+	width: 50px;
+	height: 50px;
+
+	transition: $trans-time $ease-tender opacity;
+
+	&:hover {
+		opacity: .75;
+	}
+}
+
+.social-icons__asset {
+	display: block;
+	width: 100%;
+	height: 100%;
+}

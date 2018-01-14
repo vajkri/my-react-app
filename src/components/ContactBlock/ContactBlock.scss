@@ -1,0 +1,14 @@
+/*------------------------------------*\
+		ContactBlock.scss
+\*------------------------------------*/
+
+@import "./styles/imports.scss";
+
+.contact-block {
+	margin: $spacing--lg auto;
+
+	@include mq('md') {
+		display: flex;
+		justify-content: space-between;
+	}
+}
