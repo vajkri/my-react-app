@@ -1,0 +1,13 @@
+/* ===========================================
+   elements.strong
+   ========================================= */
+
+/**
+ * Elements – unclassed HTML elements,
+ * redefine browsers' default styling
+*/
+
+strong,
+b {
+	font-weight: $font-weight--bold;
+}

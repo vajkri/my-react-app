@@ -1,0 +1,18 @@
+/* ===========================================
+   elements.page
+   ========================================= */
+
+/**
+ * Elements – unclassed HTML elements,
+ * redefine browsers' default styling
+*/
+
+html {
+	font-family: $font-primary;
+	font-size: $font-size--base;
+	line-height: $line-height--base;
+	font-weight: $font-weight--roman;
+	color: $color-dark;
+	background: $color-body-bg;
+	-webkit-font-smoothing: antialiased;
+}

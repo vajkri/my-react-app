@@ -1,0 +1,65 @@
+/* ===========================================
+   settings.colors
+   ========================================= */
+
+/**
+ * High-level settings and variables,
+ * that are accessible in whole project
+*/
+
+
+// In the Color declaration section we declare
+// all colors with a variable name referring to
+// the actual color (e.g. $color-grey).
+//
+// Then in the Color implementation section we declare
+// colors used globally for a specific function,
+// where we assign a color from the declaration
+// section to the varibale
+// (e.g. $color-primary: $color-brand-grass).
+//
+// Going forward, if a color gets used for a specific
+// purpose, it should be declared with that purpose
+// in the implementation section.
+// (e.g. link-, border-, error color, etc.)
+//
+// This makes refactoring, theming, design updates
+// much easier.
+
+
+// Color declaration
+
+$color-brand-grass:         #30903A;
+$color-brand-leafs:         #405732;
+$color-brand-violet:        #b051a2;
+
+$color-brand-granite:       #666d70;
+$color-brand-rock:          #adafaa;
+$color-brand-sand:          #999085;
+
+$color-utility-emphasized:  #ee721e;
+$color-utility-gold:        #ffcb05;
+
+
+$color-grey-100:            #525252;
+$color-grey-200:            #808080;
+$color-grey-300:            #959792;
+$color-grey-400:            #aeaeae;
+$color-grey-500:            #d9d9d9;
+$color-grey-600:            #eceae6;
+$color-grey-700:            #f8f6f3;
+
+
+
+
+
+// Color implementation
+
+$color-dark:                $color-grey-100;
+$color-light:               #ffffff;
+
+$color-primary:             $color-brand-grass;
+$color-secondary:           $color-brand-violet;
+
+
+$color-body-bg:             $color-grey-700;

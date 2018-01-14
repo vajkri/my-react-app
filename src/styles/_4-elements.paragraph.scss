@@ -1,0 +1,17 @@
+/* ===========================================
+   elements.headings
+   ========================================= */
+
+/**
+ * Elements – unclassed HTML elements,
+ * redefine browsers' default styling
+*/
+
+p {
+	font-size: $font-size--sm;
+	font-weight: $font-weight--roman;
+
+	@include mq('sm') {
+		font-size: $font-size--base;
+	}
+}

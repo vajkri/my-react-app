@@ -1,0 +1,46 @@
+/*------------------------------------*\
+		style.scss
+\*------------------------------------*/
+
+// Style.scss contains global styles for the project.
+// Components should inherit and may override these styles
+// (with component specific ones).
+// Style.scss is imported on App.js, so that it reaches every component.
+
+@import "imports.scss";
+
+
+/**
+ * #3 - GENERIC
+ */
+
+@import "3-generic.box-sizing";
+@import "3-generic.reset";
+
+
+
+
+
+/**
+ * #4 - ELEMENTS
+ */
+
+@import "4-elements.headings";
+@import "4-elements.image";
+@import "4-elements.page";
+@import "4-elements.paragraph";
+@import "4-elements.strong";
+
+
+
+
+
+/**
+ * #9 - UTILITIES
+ */
+//@import "99-utilities/utilities.align";
+//@import "99-utilities/utilities.container";
+//@import "99-utilities/utilities.grid";
+//@import "99-utilities/utilities.overflow";
+//@import "99-utilities/utilities.padding";
+//@import "99-utilities/utilities.show-hide";

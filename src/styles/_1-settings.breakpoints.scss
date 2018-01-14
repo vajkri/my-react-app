@@ -1,0 +1,16 @@
+/*------------------------------------*\
+		settings.breakpoints
+\*------------------------------------*/
+
+/**
+ * High-level settings and variables,
+ * that are accessible in whole project
+*/
+
+$breakpoints: (
+		'sm':     640px,
+		'md':     1024px,
+		'lg':     1248px
+);
+
+// See implementation of these in tools.mixins.scss

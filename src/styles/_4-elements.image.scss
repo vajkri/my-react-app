@@ -1,0 +1,14 @@
+/* ===========================================
+   elements.image
+   ========================================= */
+
+/**
+ * Elements – unclassed HTML elements,
+ * redefine browsers' default styling
+*/
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}

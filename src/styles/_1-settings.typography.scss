@@ -1,0 +1,64 @@
+/* ===========================================
+   settings.typography
+   ========================================= */
+
+/**
+ * High-level settings and variables,
+ * that are accessible in whole project
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700');
+
+// Font families
+
+$font-primary: 'Open Sans', sans-serif;
+
+
+
+
+
+// Font weights
+
+$font-weight--bold:   700;
+$font-weight--roman:  400;
+$font-weight--thin:   100;
+
+
+
+
+
+// Font sizes
+
+$font-size--h1:   88px;
+$font-size--h2:   58px;
+$font-size--h3:   42px;
+$font-size--h4:   28px;
+$font-size--h5:   18px;
+$font-size--h6:   16px;
+
+$font-size--xl:   28px;
+$font-size--lg:   20px;
+$font-size--base: 16px;
+$font-size--sm:   14px;
+$font-size--xs:   13px;
+$font-size--xxs:	11px;
+
+
+
+
+
+// Responsive multipliers
+// These are used for declaring responsive adjustments to:
+// Font sizes, and icons
+
+$mobile-multiplier--base:   0.75;
+$mobile-multiplier--subtle: 0.85;
+
+
+
+
+
+// Line heights
+
+$line-height--base:   1.45;
+$line-height--sm:     1;

@@ -1,0 +1,65 @@
+/* ===========================================
+   tools.mixins
+   ========================================= */
+
+/**
+ * High-level mixins and functions,
+ * that are accessible in whole project
+ *
+ * NOTE:
+ * only use mixins, where creating a utility class
+ * is not an option.
+ * Mixins create code-duplications, don't follow
+ * the DRY principle, and therefore are not an efficient
+ * way to write code that is applicable to numerous elements.
+*/
+
+
+
+
+
+// Media query mixin
+// Min-width is default. For max-width, pass 'max' as second param.
+
+/* Example use:
+
+1. With min-width
+  .foo {
+      padding: 20px;
+
+      @include mq('sm') {
+          padding-top: 40px;
+      }
+  }
+
+2. With max-width
+  .foo {
+      padding: 20px;
+
+      @include mq('md', max) {
+          padding-top: 10px;
+      }
+  }
+*/
+@mixin mq($width, $type: min) {
+	@if map_has_key($breakpoints, $width) {
+		$width: map_get($breakpoints, $width);
+		@if $type == max {
+			$width: $width - 1px;
+		}
+		@media only screen and (#{$type}-width: $width) {
+			@content;
+		}
+	}
+}
+
+
+
+
+
+// Breaks word when viewport is not wide enough
+@mixin break-word() {
+	word-break: break-all;
+	word-break: break-word;
+	hyphens: auto;
+}

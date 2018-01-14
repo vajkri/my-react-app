@@ -1,0 +1,26 @@
+/*------------------------------------*\
+		imports.scss
+\*------------------------------------*/
+
+// Imports.scss imports all "virtual" files consisting of variables and mixins.
+// This file should be imported on any "actual" files in the project.
+// E.g. style files in src/components, and files in src/styles from layer 3+.
+
+/**
+ * #1 - SETTINGS
+ */
+
+@import "1-settings.breakpoints";
+@import "1-settings.colors";
+@import "1-settings.global";
+@import "1-settings.typography";
+
+
+
+
+
+/**
+ * #2 - TOOLS
+ */
+
+@import "2-tools.mixins";
