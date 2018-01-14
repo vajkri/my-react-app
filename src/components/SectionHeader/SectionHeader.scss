@@ -1,0 +1,11 @@
+/*------------------------------------*\
+		SectionCta.scss
+\*------------------------------------*/
+
+@import "./styles/imports.scss";
+
+.section-header {
+	@include mq('md', max) {
+		text-align: center;
+	}
+}

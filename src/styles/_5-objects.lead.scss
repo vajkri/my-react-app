@@ -1,0 +1,17 @@
+/* ===========================================
+   objects.lead
+   ========================================= */
+
+/**
+ * Objects – class-based selectors, that define
+ * undecorated, unopinionated design patterns
+*/
+
+.lead {
+	color: $color-grey-200;
+	font-size: $font-size--lg * $mobile-multiplier--base;
+
+	@include mq('sm') {
+		font-size: $font-size--lg;
+	}
+}
