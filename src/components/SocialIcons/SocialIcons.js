@@ -8,23 +8,35 @@ class SocialIcons extends Component {
 
 	render() {
 
+		const icons = [
+			{
+				src: pinterest,
+				href: '#!',
+				alt: 'pinterest icon'
+			},
+			{
+				src: facebook,
+				href: '#!',
+				alt: 'facebook icon'
+			},
+			{
+				src: instagram,
+				href: '#!',
+				alt: 'instagram icon'
+			}
+		];
+
 		return (
 				<ul className="social-icons">
-					<li className="social-icons__item">
-						<a className="social-icons__link" href="#!" target="_blank">
-							<img className="social-icons__asset" src={pinterest} alt="pinterest icon"/>
-						</a>
-					</li>
-					<li className="social-icons__item">
-						<a className="social-icons__link" href="#!" target="_blank">
-							<img className="social-icons__asset" src={facebook} alt="facebook icon"/>
-						</a>
-					</li>
-					<li className="social-icons__item">
-						<a className="social-icons__link" href="#!" target="_blank">
-							<img className="social-icons__asset" src={instagram} alt="instagram icon"/>
-						</a>
-					</li>
+					{
+						icons.map(item =>
+							<li className="social-icons__item">
+								<a className="social-icons__link" href={item.href} target="_blank">
+									<img className="social-icons__asset" src={item.src} alt={item.alt}/>
+								</a>
+							</li>
+						)
+					}
 				</ul>
 		);
 	}
