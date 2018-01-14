@@ -1,0 +1,16 @@
+/* ===========================================
+   objects.icon
+   ========================================= */
+
+/**
+ * Objects – class-based selectors, that define
+ * undecorated, unopinionated design patterns
+*/
+
+.icon {
+	display: inline-block;
+	width: $icon-size;
+	height: $icon-size;
+
+	fill: currentColor;
+}

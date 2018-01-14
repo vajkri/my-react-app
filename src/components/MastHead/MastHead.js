@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import hero from '../../assets/images/image-hero.jpg';
 import './MastHead.css';
 
-console.log(hero);
-
 class MastHead extends Component {
 	render() {
 		return (

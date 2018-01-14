@@ -22,4 +22,8 @@
 
 .u-container--narrow {
 	max-width: $content-width--narrow;
+
+	@include mq('md') {
+		max-width: $content-width;
+	}
 }

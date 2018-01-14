@@ -1,0 +1,32 @@
+/* ===========================================
+   objects.cta
+   ========================================= */
+
+/**
+ * Objects – class-based selectors, that define
+ * undecorated, unopinionated design patterns
+*/
+
+.cta {
+	display: inline-flex;
+	align-items: center;
+
+	color: $color-primary;
+
+	transition: $trans-time $ease-elastic color;
+
+	&:hover {
+		color: darken($color-primary, 7%);
+	}
+}
+
+.cta__icon {
+	margin-left: $spacing--sm;
+	fill: currentColor;
+
+	transition: $trans-time $ease-elastic transform;
+
+	.cta:hover & {
+		transform: translateX(2px);
+	}
+}

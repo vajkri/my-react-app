@@ -1,0 +1,31 @@
+/*------------------------------------*\
+		SectionCta.scss
+\*------------------------------------*/
+
+@import "./styles/imports.scss";
+
+.section-cta {
+	text-align: center;
+
+	@include mq('md') {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.section-cta__title {
+	margin-bottom: $spacing--base;
+
+	@include mq('md') {
+		margin-bottom: 0;
+		margin-right: $spacing--sm;
+	}
+}
+
+.section-cta__link {
+	@include mq('md') {
+		flex-shrink: 0;
+		margin-left: $spacing--sm;
+	}
+}

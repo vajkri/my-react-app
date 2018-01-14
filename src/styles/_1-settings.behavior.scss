@@ -1,0 +1,22 @@
+/* ===========================================
+   settings.behavior
+   ========================================= */
+
+/**
+ * High-level settings and variables,
+ * that are accessible in whole project
+*/
+
+// Transition time
+
+$trans-time:        .25s;
+$trans-time--long:  .4s;
+
+
+
+
+
+// Easing
+
+$ease-elastic:  cubic-bezier(.68, -0.55, .265, 1.55);
+$ease-tender:   cubic-bezier(0.73, 0.09, 0.21, 0.96);

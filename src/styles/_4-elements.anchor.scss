@@ -1,0 +1,13 @@
+/* ===========================================
+   elements.anchor
+   ========================================= */
+
+/**
+ * Elements – unclassed HTML elements,
+ * redefine browsers' default styling
+*/
+
+a {
+	color: currentColor; // this way color will be inherited from containing element
+	text-decoration: none;
+}

@@ -1,0 +1,18 @@
+/* ===========================================
+   utilities.block
+   ========================================= */
+
+/**
+ * Utilities – utility- and helper classes
+ * with the ability to override anything
+*/
+
+// Contains multiple components and supplies spacing between them
+
+.u-block {
+	margin: $spacing--lg 0;
+
+	@include mq('sm') {
+		margin: $spacing--xl 0;
+	}
+}
