@@ -28,15 +28,13 @@ class SocialIcons extends Component {
 
 		return (
 				<ul className="social-icons">
-					{
-						icons.map(item =>
-							<li className="social-icons__item">
+					{ icons.map((item, index) => (
+							<li className="social-icons__item" key={index}>
 								<a className="social-icons__link" href={item.href} target="_blank">
-									<img className="social-icons__asset" src={item.src} alt={item.alt}/>
+								<img className="social-icons__asset" src={item.src} alt={item.alt}/>
 								</a>
 							</li>
-						)
-					}
+					))}
 				</ul>
 		);
 	}
