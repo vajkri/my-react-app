@@ -1,11 +1,31 @@
 import React, { Component } from 'react';
 import Swiper from 'react-id-swiper';
+import { getImageData } from './../../utils/placeholder-api';
 import './SliderVendor.css';
 import './Slider.css';
 
 class Slider extends Component {
+	constructor() {
+		super();
+		this.state = {
+			images: []
+		};
+	}
+
+	getImages() {
+		getImageData().then((images) => {
+			this.setState({ images });
+		});
+	}
+
+	componentDidMount() {
+		this.getImages();
+	}
+
 	render() {
-		const params = {
+		const { images } = this.state;
+
+		const sliderParams = {
 			containerClass: 'slider',
 			containerModifierClass: 'slider--',
 			wrapperClass: 'slider__wrapper',
@@ -29,54 +49,22 @@ class Slider extends Component {
 				1024: {
 					slidesPerView: 2
 				}
-			}
+			},
+			rebuildOnUpdate: true // so slider rebuilds when image data is loaded
 		};
 
 		return(
-				<Swiper {...params}>
-					<a href="#!">
-						<img className="slider__slide-image" src="https://source.unsplash.com/400x600/?mountain,nature" alt="something"/>
-						<div className="slider__slide-content">
-							<h3 className="slider__slide-title">Love</h3>
-							<p className="slider__slide-subtitle">100+ Inspirational images</p>
-						</div>
-					</a>
-					<a href="#!">
-						<img className="slider__slide-image" src="https://source.unsplash.com/400x600/?mountain,nature" alt="something"/>
-						<div className="slider__slide-content">
-							<h3 className="slider__slide-title">Love</h3>
-							<p className="slider__slide-subtitle">100+ Inspirational images</p>
-						</div>
-					</a>
-					<a href="#!">
-						<img className="slider__slide-image" src="https://source.unsplash.com/400x600/?mountain,nature" alt="something"/>
-						<div className="slider__slide-content">
-							<h3 className="slider__slide-title">Love</h3>
-							<p className="slider__slide-subtitle">100+ Inspirational images</p>
-						</div>
-					</a>
-					<a href="#!">
-						<img className="slider__slide-image" src="https://source.unsplash.com/400x600/?mountain,nature" alt="something"/>
-						<div className="slider__slide-content">
-							<h3 className="slider__slide-title">Love</h3>
-							<p className="slider__slide-subtitle">100+ Inspirational images</p>
-						</div>
-					</a>
-					<a href="#!">
-						<img className="slider__slide-image" src="https://source.unsplash.com/400x600/?mountain,nature" alt="something"/>
-						<div className="slider__slide-content">
-							<h3 className="slider__slide-title">Love</h3>
-							<p className="slider__slide-subtitle">100+ Inspirational images</p>
-						</div>
-					</a>
-					<a href="#!">
-						<img className="slider__slide-image" src="https://source.unsplash.com/400x600/?mountain,nature" alt="something"/>
-						<div className="slider__slide-content">
-							<h3 className="slider__slide-title">Love</h3>
-							<p className="slider__slide-subtitle">100+ Inspirational images</p>
-						</div>
-					</a>
-				</Swiper>
+			<Swiper {...sliderParams}>
+				{ images.map((image, index) => (
+						<a href="#!" key={index}>
+							<img className="slider__slide-image" src={image.url} alt={image.alt}/>
+							<div className="slider__slide-content">
+								<h3 className="slider__slide-title">{image.title}</h3>
+								<p className="slider__slide-subtitle">100+ Inspirational images</p>
+							</div>
+						</a>
+				))}
+			</Swiper>
 		)
 	}
 }
