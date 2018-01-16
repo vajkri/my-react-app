@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import Swiper from 'react-id-swiper';
+import Swiper from 'react-id-swiper'; // image slider plugin
+import lazySizes from 'lazysizes'; // lazy loader plugin
 import { getImageData } from './../../utils/placeholder-api';
 import './SliderVendor.css';
 import './Slider.css';
@@ -53,12 +54,14 @@ class Slider extends Component {
 			rebuildOnUpdate: true // so slider rebuilds when image data is loaded
 		};
 
+		lazySizes.init();
+
 		return(
 			<Swiper {...sliderParams}>
 				{ images.map((image, index) => (
 						<a href="#!" key={index}>
 							<div className="slider__slide-inner">
-								<img className="slider__slide-image" src={image.url} alt={image.alt}/>
+								<img className="slider__slide-image lazyload" data-src={image.url} alt={image.alt}/>
 								<div className="slider__slide-content">
 									<h3 className="slider__slide-title">{image.title}</h3>
 									<p className="slider__slide-subtitle">100+ Inspirational images</p>
