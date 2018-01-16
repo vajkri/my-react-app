@@ -57,10 +57,12 @@ class Slider extends Component {
 			<Swiper {...sliderParams}>
 				{ images.map((image, index) => (
 						<a href="#!" key={index}>
-							<img className="slider__slide-image" src={image.url} alt={image.alt}/>
-							<div className="slider__slide-content">
-								<h3 className="slider__slide-title">{image.title}</h3>
-								<p className="slider__slide-subtitle">100+ Inspirational images</p>
+							<div className="slider__slide-inner">
+								<img className="slider__slide-image" src={image.url} alt={image.alt}/>
+								<div className="slider__slide-content">
+									<h3 className="slider__slide-title">{image.title}</h3>
+									<p className="slider__slide-subtitle">100+ Inspirational images</p>
+								</div>
 							</div>
 						</a>
 				))}
