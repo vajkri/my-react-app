@@ -1,7 +1,24 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# TDLR;
+This is a react web-app built via create-react-app boilerplate.
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+It uses the ITCSS methodology combined with a component-based pod-structure for organizing styles. 
+
+More info on ITCSS: <br>
+https://www.xfive.co/blog/itcss-scalable-maintainable-css-architecture/
+
+## Install and run
+
+### Dev mode
+ 1. Run `yarn install`
+ 2. Run `yarn build-css`
+ 2. Now `yarn start` - this will start a local server
+
+### Prod mode 
+ 1. To compile production code, run `yarn build`
+ 2. Run `serve -s build` to serve it with a static server
+ 
+ 
+# More on create-react-app boilerplate
 
 ## Table of Contents
 
